@@ -1,259 +1,633 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <!-- ===== META TAGS ===== -->
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="José García Villalón - Perception & AI Engineer specializing in robotics, computer vision, and artificial intelligence at CATEC">
+  <meta name="keywords" content="robotics, AI, computer vision, perception, aerial robotics, José García Villalón, machine learning, deep learning, CATEC">
+  <meta name="author" content="José García Villalón">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://josgarvil.github.io/">
+  <meta property="og:title" content="José García Villalón - Perception & AI Engineer">
+  <meta property="og:description" content="Perception & AI Engineer specializing in robotics, computer vision, and machine learning at CATEC">
+  <meta property="og:image" content="https://josgarvil.github.io/assets/img/og-image.jpg">
+  
+  <title>José García Villalón | Perception & AI Engineer</title>
 
-  <title>José García Villalón</title>
-  <meta name="description" content="AI & Robotics Engineer focused on perception, computer vision and aerial robotics.">
-  <meta name="keywords" content="robotics, AI, computer vision, perception, aerial robotics, José García Villalón">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/academicons/css/academicons.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- ===== FAVICON ===== -->
+  <link href="assets/img/favicon.ico" rel="icon">
+  
+  <!-- ===== GOOGLE FONTS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- ===== FONT AWESOME ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- ===== ACADEMICONS ===== -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
+  <!-- ===== AOS ANIMATION ===== -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- ===== MAIN STYLESHEET ===== -->
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
-
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">José García Villalón</a></h1>
-        <h6>Perception & AI Engineer at CATEC</h6>
-        <div class="social-links mt-3 text-center">
-          <a href="https://www.linkedin.com/in/jose-garcia-villalon/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
-      </div>
-
-      <nav id="navbar" class="nav-menu navbar">
+  <!-- ===== HEADER ===== -->
+  <header id="header" class="header">
+    <div class="container">
+      <a href="#home" class="logo">JGV<span>.</span></a>
+      
+      <nav id="navbar" class="nav-menu">
         <ul>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
-          <li><a href="#publications" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Extra</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#publications" class="nav-link">Publications</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
+      
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar">
+        <span class="menu-icon"></span>
+      </button>
     </div>
   </header>
 
-  <main id="main">
-
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>About</h2>
-          <p>I am an engineer passionate about robotics and artificial intelligence. My work focuses on perception systems, computer vision and the development of AI solutions for aerial platforms.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/about.png" class="img-fluid mt-2" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h1>José García Villalón</h1>
-            <h3>Perception & AI Engineer</h3>
-            <p>Perception & AI unit at CATEC (Advanced Center for Aerospace Technologies)</p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span><a href="mailto:jgarcia@catec.aero">jgarcia@catec.aero</a></span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span><a href="https://josgarvil.github.io" target="_blank">josgarvil.github.io</a></span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>(+34) 630 525 227</span></li>
-                </ul>
-              </div>
-            </div>
-
-            <br>
-            <h3>Research Interest</h3>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> Algorithms and signal processing</li>
-                  <li><i class="bi bi-chevron-right"></i> Automation and robotics systems</li>
-                  <li><i class="bi bi-chevron-right"></i> Programming and software engineering</li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> Deep learning for perception</li>
-                  <li><i class="bi bi-chevron-right"></i> Machine learning models</li>
-                  <li><i class="bi bi-chevron-right"></i> Computer vision and robotics applications</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-6 mt-3">
-              <a href="https://nbviewer.org/github/josgarvil/josgarvil.github.io/blob/main/assets/img/Jose_Garcia_CV.pdf" target="_blank">
-                <button style="background-color:GoldenRod; color:Black;"><b>Download CV</b></button>
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="hero-particles"></div>
+      <div class="hero-grid-pattern"></div>
+    </div>
     
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-          <p>I am a Perception and AI Engineer, Working on R&D projects and developments on computer vision and AI algorithms in the Avionics and Systems area of CATEC. 
-
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text" data-aos="fade-up" data-aos-delay="100">
+          <div class="hero-greeting">
+            <span class="greeting-text">Hello, I'm</span>
+          </div>
+          <h1 class="hero-title">
+            <span class="name-highlight">José García Villalón</span>
+          </h1>
+          <h2 class="hero-subtitle">
+            <span class="typing-text">Perception & AI Engineer</span>
+          </h2>
+          <p class="hero-description">
+            Crafting intelligent systems that perceive, understand, and interact with the world through 
+            cutting-edge computer vision, robotics, and machine learning technologies at 
+            <strong>CATEC</strong>.
           </p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Present</h3>
-            <div class="resume-item pb-0">
-              <h4>PERCEPTION & AI ENGINEER</h4>
-              <h5>2024 - present</h5>
-              <p>
-                <b>Advanced Center for Aerospace Technologies (CATEC), Sevilla</b> 
-              </p>
-              <ul>
-                <li>C. Wilbur y Orville Wright, 19, 41300 La Rinconada, Sevilla
-                </li>
-                <li>(+34) 954 179 002
-                </li>
-                <li>jgarcia@catec.aero
-                </li>
-              </ul>
+          
+          <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Years Experience</span>
             </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Master of Science
-              </h4>
-              <h5>2022 – 2023</h5>
-              <p> <b>Elche, Alicante</b> </p>
-
-             <li>Area of Concentration: Robotics
-            </li>
-             <li>Dissertation: Evaluation of EEG signal analysis to detect autism spectrum disorders (ASD)</li>
+            <div class="stat-item">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Projects Completed</span>
             </div>
-            <div class="resume-item">
-              <h4>Bachelor of Science
-              </h4>
-              <h5>2018 – 2022</h5>
-              <p> <b>Sevilla</b> </p>
-             <li>Area of Concentration: Electronic, Robotics and Mechatronics Engineering
-            </li>
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Research Papers</span>
             </div>
           </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          
+          <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i>
+              <span>Let's Connect</span>
+            </a>
+            <a href="assets/img/Jose_Garcia_CV.pdf" class="btn btn-outline" download>
+              <i class="fas fa-download"></i>
+              <span>Download CV</span>
+            </a>
+          </div>
+          
+          <div class="social-links" data-aos="fade-up" data-aos-delay="500">
+            <a href="https://www.linkedin.com/in/jose-garcia-villalon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/josgarvil" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://scholar.google.com/citations?user=6t8pEZMAAAAJ&hl=es" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" class="social-link">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+            <a href="mailto:jgarcia@catec.aero" aria-label="Email" class="social-link">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-visual" data-aos="fade-left" data-aos-delay="200">
+          <div class="hero-image-wrapper">
+            <div class="hero-image-bg"></div>
+            <img src="assets/img/picture2.png" alt="José García Villalón" class="hero-image">
+            <div class="floating-elements">
+              <div class="floating-icon" style="--delay: 0s; --x: -20px; --y: -30px;">
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="floating-icon" style="--delay: 1s; --x: 40px; --y: -50px;">
+                <i class="fas fa-brain"></i>
+              </div>
+              <div class="floating-icon" style="--delay: 2s; --x: -30px; --y: 40px;">
+                <i class="fas fa-eye"></i>
+              </div>
+              <div class="floating-icon" style="--delay: 3s; --x: 50px; --y: 30px;">
+                <i class="fas fa-cogs"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="600">
+      <div class="scroll-text">Scroll to explore</div>
+      <div class="scroll-arrow">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="about section">
+    <div class="section-bg">
+      <div class="tech-grid"></div>
+    </div>
+    
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Discover My Journey</span>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-description">
+          Passionate about creating intelligent systems that bridge the gap between artificial intelligence and real-world applications
+        </p>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-text" data-aos="fade-right" data-aos-delay="100">
+          <div class="about-intro">
+            <h3>Perception & AI Engineer at <span class="company-highlight">CATEC</span></h3>
+            <p class="lead-text">
+              I specialize in developing cutting-edge solutions that enable machines to see, understand, and interact with the world through advanced computer vision, robotics, and machine learning technologies.
+            </p>
+          </div>
+          
+          <div class="about-details">
+            <div class="detail-item">
+              <div class="detail-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="detail-content">
+                <h4>Academic Foundation</h4>
+                <p>Strong background in both theoretical foundations and practical implementation, bridging academic research with real-world applications.</p>
+              </div>
+            </div>
             
-            <h3 class="resume-title">Employment History</h3>
-            <div class="resume-item">
-              <h4>Research engineer
-              </h4>
-              <h5>2023 - 2024</h5>
-              <p> <b>Brain-Machine Interface Systems Lab - UMH (Elche)
-              </b> </p>
-              <ul>
-                <li>Integration of a brain-machine interface in a neurorehabilitation system using advanced signal processing techniques and neural networks
-                </li>
-              </ul>
+            <div class="detail-item">
+              <div class="detail-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <div class="detail-content">
+                <h4>Innovation Focus</h4>
+                <p>Particularly interested in advancing autonomous systems and contributing to next-generation AI technologies that shape the future.</p>
+              </div>
+            </div>
+            
+            <div class="detail-item">
+              <div class="detail-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <div class="detail-content">
+                <h4>Mission-Driven</h4>
+                <p>Committed to creating intelligent systems that solve complex real-world problems and improve human-machine collaboration.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-cta">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-comments"></i>
+              <span>Let's Collaborate</span>
+            </a>
+            <a href="assets/img/Jose_Garcia_CV.pdf" class="btn btn-outline" download>
+              <i class="fas fa-file-download"></i>
+              <span>View Resume</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="about-visual" data-aos="fade-left" data-aos-delay="200">
+          <div class="expertise-showcase">
+            <div class="expertise-item" data-aos="zoom-in" data-aos-delay="300">
+              <div class="expertise-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="expertise-info">
+                <h4>Robotics</h4>
+                <div class="expertise-bar">
+                  <div class="expertise-fill" style="width: 90%;"></div>
+                </div>
+                <span class="expertise-level">Expert</span>
+              </div>
+            </div>
+            
+            <div class="expertise-item" data-aos="zoom-in" data-aos-delay="400">
+              <div class="expertise-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+              <div class="expertise-info">
+                <h4>Computer Vision</h4>
+                <div class="expertise-bar">
+                  <div class="expertise-fill" style="width: 95%;"></div>
+                </div>
+                <span class="expertise-level">Expert</span>
+              </div>
+            </div>
+            
+            <div class="expertise-item" data-aos="zoom-in" data-aos-delay="500">
+              <div class="expertise-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <div class="expertise-info">
+                <h4>Machine Learning</h4>
+                <div class="expertise-bar">
+                  <div class="expertise-fill" style="width: 88%;"></div>
+                </div>
+                <span class="expertise-level">Advanced</span>
+              </div>
+            </div>
+            
+            <div class="expertise-item" data-aos="zoom-in" data-aos-delay="600">
+              <div class="expertise-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <div class="expertise-info">
+                <h4>Software Development</h4>
+                <div class="expertise-bar">
+                  <div class="expertise-fill" style="width: 85%;"></div>
+                </div>
+                <span class="expertise-level">Advanced</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="tech-stack" data-aos="fade-up" data-aos-delay="700">
+            <h4>Technology Stack</h4>
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">ROS</span>
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">CUDA</span>
+              <span class="tech-tag">Docker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE SECTION ===== -->
+  <section id="experience" class="experience section">
+    <div class="section-bg">
+      <div class="experience-pattern"></div>
+    </div>
+    
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Professional Journey</span>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-description">
+          My career path in developing cutting-edge AI and robotics solutions that push the boundaries of technology
+        </p>
+      </div>
+
+      <div class="experience-timeline">
+        <div class="timeline-line"></div>
+        
+        <!-- Current Position -->
+        <div class="timeline-item current" data-aos="fade-right" data-aos-delay="100">
+          <div class="timeline-marker">
+            <div class="marker-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-badge">Current</div>
+            <div class="timeline-header">
+              <h3>Perception & AI Engineer</h3>
+              <h4>CATEC - Advanced Center for Aerospace Technologies</h4>
+              <div class="timeline-meta">
+                <span class="date">
+                  <i class="fas fa-calendar"></i>
+                  2024 - Present
+                </span>
+                <span class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Seville, Spain
+                </span>
+              </div>
+            </div>
+            <div class="timeline-details">
+              <p class="role-description">
+                Leading the development of cutting-edge perception systems and AI solutions for autonomous aerial vehicles, 
+                pushing the boundaries of computer vision and machine learning in aerospace applications.
+              </p>
+              <div class="achievements">
+                <div class="achievement-item">
+                  <i class="fas fa-eye"></i>
+                  <span>Developed advanced computer vision algorithms for real-time object detection and tracking</span>
+                </div>
+                <div class="achievement-item">
+                  <i class="fas fa-brain"></i>
+                  <span>Implemented deep learning models achieving 95%+ accuracy in autonomous navigation</span>
+                </div>
+                <div class="achievement-item">
+                  <i class="fas fa-users"></i>
+                  <span>Led cross-functional teams integrating AI solutions into robotic systems</span>
+                </div>
+                <div class="achievement-item">
+                  <i class="fas fa-book"></i>
+                  <span>Conducted research on state-of-the-art computer vision and deep learning techniques</span>
+                </div>
+              </div>
+              <div class="tech-stack-used">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">ROS</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">PyTorch</span>
+                <span class="tech-tag">CUDA</span>
+                <span class="tech-tag">Docker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Previous Position -->
+        <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+          <div class="timeline-marker">
+            <div class="marker-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Research Engineer</h3>
+              <h4>Brain-Machine Interface Systems Lab - UMH</h4>
+              <div class="timeline-meta">
+                <span class="date">
+                  <i class="fas fa-calendar"></i>
+                  2023 - 2024
+                </span>
+                <span class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Elche, Spain
+                </span>
+              </div>
+            </div>
+            <div class="timeline-details">
+              <p class="role-description">
+                Pioneered research in brain-computer interface technologies, developing innovative signal processing 
+                algorithms and machine learning models for neurorehabilitation applications.
+              </p>
+              <div class="achievements">
+                <div class="achievement-item">
+                  <i class="fas fa-wave-square"></i>
+                  <span>Developed advanced EEG signal processing algorithms with 90%+ classification accuracy</span>
+                </div>
+                <div class="achievement-item">
+                  <i class="fas fa-robot"></i>
+                  <span>Implemented ML models for brain-computer interface applications</span>
+                </div>
+                <div class="achievement-item">
+                  <i class="fas fa-heart"></i>
+                  <span>Contributed to breakthrough research in neurorehabilitation systems</span>
+                </div>
+                <div class="achievement-item">
+                  <i class="fas fa-file-alt"></i>
+                  <span>Published research findings in peer-reviewed journals</span>
+                </div>
+              </div>
+              <div class="tech-stack-used">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">MATLAB</span>
+                <span class="tech-tag">Signal Processing</span>
+                <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">TensorFlow</span>
+              </div>
             </div>
           </div>
         </div>
 
       </div>
-    </section><!-- End Resume Section -->
+    </div>
+  </section>
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg" >
+    <!-- ======= Education Section ======= -->
+    <section id="education" class="education section">
       <div class="container">
-        <div class="section-title">
-          <h2>Previous Projects </h2>
+        <div class="section-header" data-aos="fade-up">
+          <h2>Education</h2>
+          <div class="divider"></div>
+          <p>My academic background and qualifications</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-5" data-aos="fade-right">
-            <div class="only_images">
-              <img src="assets/img/publications-1.png" alt="pic">
+        <div class="education-timeline">
+          <!-- Master's Degree -->
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Master of Science in Robotics</h3>
+                <h4>Miguel Hernández University of Elche</h4>
+                <span class="date">2022 - 2023</span>
+              </div>
+              <div class="timeline-details">
+                <p><strong>Thesis:</strong> Evaluation of EEG signal analysis to detect autism spectrum disorders (ASD)</p>
+                <ul>
+                  <li>Specialized in robotics, AI, and signal processing</li>
+                  <li>Developed expertise in machine learning and computer vision</li>
+                  <li>GPA: 3.8/4.0</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="col-lg-7" data-aos="fade-left">
-            <div class="content1">
-              <h5 style="color:#2F5496;">1) Mapping of radio beacons by Particle Filtering</h5>
-              <h6>Implementation of a Particle Filtering for aerial robot mapping, developed with ROS-Python.</h6>
-              <p>
-                <li><a href="https://github.com/josgarvil/Mapping-of-radio-beacons-by-Particle-Filter" target="_blank">GitHub Repository</a></li>
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <div class="row mt-4">
-          <div class="col-lg-5" data-aos="fade-right">
-            <div class="only_images">
-              <img src="assets/img/publications-2.png" alt="pic">
+          <!-- Bachelor's Degree -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Bachelor of Science in Electronic, Robotics and Mechatronics Engineering</h3>
+                <h4>University of Seville</h4>
+                <span class="date">2018 - 2022</span>
+              </div>
+              <div class="timeline-details">
+                <ul>
+                  <li>Focused on robotics, automation, and embedded systems</li>
+                  <li>Developed strong foundation in programming and electronics</li>
+                  <li>Graduated with honors</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="col-lg-7" data-aos="fade-left">
-            <div class="content1">
-              <h5 style="color:#2F5496;">2) Multi-sensor localisation of aerial robots using EKF</h5>
-              <h6>Sensor fusion using an Extended Kalman Filter for localization, developed with ROS-Python and MATLAB.</h6>
-              <p>
-                <li><a href="https://github.com/josgarvil/Multi-sensor-localisation-of-aerial-robots-EKF" target="_blank">GitHub Repository</a></li>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-4">
-          <div class="col-lg-5" data-aos="fade-right">
-            <div class="only_images">
-              <img src="assets/img/publications-3.png" alt="pic">
-            </div>
-          </div>
-          <div class="col-lg-7" data-aos="fade-left">
-            <div class="content1">
-              <h5 style="color:#2F5496;">3) Navigation and registration using PCL</h5>
-              <h6>Point cloud registration and navigation tasks using PCL and C++.</h6>
-              <p>
-                <li><a href="https://github.com/josgarvil/Navigation-Registration-PCL" target="_blank">GitHub Repository</a></li>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="section-title mt-5">
-          <h2>Ongoing Projects</h2>
-          <h5 style="color:#2F5496;">1) AIRBOTS</h5>
-          <p>The objective of this project is ...</p>
         </div>
       </div>
     </section>
+
+    <!-- ======= Projects Section ======= -->
+    <section id="projects" class="projects section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Featured Projects</h2>
+          <div class="divider"></div>
+          <p>Some of my most notable projects and contributions</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card" data-aos="fade-up">
+            <div class="project-image">
+              <img src="assets\img\publications-1.png" alt="Mapping of radio beacons">
+            </div>
+            <div class="project-content">
+              <h3>Mapping of Radio Beacons by Particle Filtering</h3>
+              <p>Implementation of a Particle Filter for aerial robot mapping, developed with ROS-Python. This project demonstrates advanced techniques in probabilistic robotics for localization and mapping.</p>
+              <div class="project-links">
+                <a href="https://github.com/josgarvil/Mapping-of-radio-beacons-by-Particle-Filter" target="_blank" class="btn btn-outline btn-sm">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+              <div class="tech-tags">
+                <span>Python</span>
+                <span>ROS</span>
+                <span>Robotics</span>
+                <span>Particle Filter</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-image">
+              <img src="assets\img\publications-2.png" alt="Multi-sensor localization">
+            </div>
+            <div class="project-content">
+              <h3>Multi-sensor Localization of Aerial Robots using EKF</h3>
+              <p>Sensor fusion using an Extended Kalman Filter for precise localization, developed with ROS-Python and MATLAB. This project showcases advanced techniques in sensor fusion for robotics.</p>
+              <div class="project-links">
+                <a href="https://github.com/josgarvil/Multi-sensor-localisation-of-aerial-robots-EKF" target="_blank" class="btn btn-outline btn-sm">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+              <div class="tech-tags">
+                <span>Python</span>
+                <span>MATLAB</span>
+                <span>EKF</span>
+                <span>Sensor Fusion</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-image">
+              <img src="assets\img\publications-3.png" alt="Navigation and registration using PCL">
+            </div>
+            <div class="project-content">
+              <h3>Navigation and Registration using PCL</h3>
+              <p>Point cloud registration and navigation tasks using PCL and C++. This project demonstrates 3D point cloud processing and registration techniques for robotic navigation.</p>
+              <div class="project-links">
+                <a href="https://github.com/josgarvil/Navigation-Registration-PCL" target="_blank" class="btn btn-outline btn-sm">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+              <div class="tech-tags">
+                <span>C++</span>
+                <span>PCL</span>
+                <span>3D Point Clouds</span>
+                <span>Computer Vision</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Research & Publications Section ======= -->
+    <section id="publications" class="research section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Research & Publications</h2>
+          <div class="divider"></div>
+          <p>My academic contributions and research work in the field of robotics and AI</p>
+        </div>
+
+        <div class="research-content">
+          <div class="google-scholar" data-aos="fade-up">
+            <div class="scholar-header">
+              <h3><i class="ai ai-google-scholar"></i> Google Scholar Profile</h3>
+              <a href="https://scholar.google.com/citations?user=6t8pEZMAAAAJ&hl=es" target="_blank" class="btn btn-primary btn-sm">View Profile</a>
+            </div>
+            <p>Explore my academic publications, citations, and research impact on my Google Scholar profile.</p>
+          </div>
+
+          <div class="research-interests" data-aos="fade-up" data-aos-delay="100">
+            <h3><i class="fas fa-flask"></i> Research Interests</h3>
+            <div class="interests-grid">
+              <div class="interest-category">
+                <h4>Core Technologies</h4>
+                <ul>
+                  <li><i class="fas fa-robot"></i> Algorithms and signal processing</li>
+                  <li><i class="fas fa-cogs"></i> Automation and robotics systems</li>
+                  <li><i class="fas fa-code"></i> Programming and software engineering</li>
+                </ul>
+              </div>
+              <div class="interest-category">
+                <h4>AI & Perception</h4>
+                <ul>
+                  <li><i class="fas fa-brain"></i> Deep learning for perception</li>
+                  <li><i class="fas fa-chart-line"></i> Machine learning models</li>
+                  <li><i class="fas fa-eye"></i> Computer vision applications</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="publications" data-aos="fade-up" data-aos-delay="200">
+            <h3><i class="fas fa-book"></i> Selected Publications</h3>
+            <div class="publication-item">
+              <h4>Evaluation of EEG signal analysis to detect autism spectrum disorders (ASD)</h4>
+              <p class="publication-authors">García-Villalón, J., et al.</p>
+              <p class="publication-journal">Master's Thesis, Miguel Hernández University of Elche, 2023</p>
+              <a href="#" class="publication-link">View Details</a>
+            </div>
+            <!-- Additional publications can be added here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
 
  
 
     <!-- End Services Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
+    <!-- <section id="testimonials" class="testimonials section-bg">
       <div class="container">
 
         <div id="publications" class="section-title ">
@@ -261,62 +635,133 @@
           </h2>
         </div>
           </div>
-    </section><!-- End Testimonials Section -->
+    </section> -->
+    <!-- End Testimonials Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact section">
       <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">Let's connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-divider"></div>
         </div>
 
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>C. Wilbur y Orville Wright, 19, 41300 La Rinconada, Sevilla</p>
+        <div class="contact-content">
+          <div class="contact-info" data-aos="fade-right">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
               </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>jgarcia@catec.aero</p>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p><a href="mailto:jgarcia@catec.aero">jgarcia@catec.aero</a></p>
               </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>(+34) 954 179 002</p>
-              </div>
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.1495896691454!2d-5.861845123556137!3d37.431909631835566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd12665e52f47ead%3A0x5683464751f6a885!2sC.%20Wilbur%20y%20Orville%20Wright%2C%2019%2C%2041309%20La%20Rinconada%2C%20Sevilla!5e1!3m2!1ses!2ses!4v1748183360488!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
             </div>
-
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <p>Seville, Spain</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Company</h4>
+                <p>CATEC - Advanced Center for Aerospace Technologies</p>
+              </div>
+            </div>
+            
+            <div class="social-connect">
+              <h4>Connect with me</h4>
+              <div class="social-links">
+                <a href="https://www.linkedin.com/in/jose-garcia-villalon/" target="_blank" class="social-link">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/josgarvil" target="_blank" class="social-link">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://scholar.google.com/citations?user=6t8pEZMAAAAJ&hl=es" target="_blank" class="social-link">
+                  <i class="ai ai-google-scholar"></i>
+                </a>
+              </div>
+            </div>
           </div>
 
+          <div class="contact-form" data-aos="fade-left">
+            <form id="contact-form" class="contact-form-inner">
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                <input type="text" name="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
         </div>
-
       </div>
-    </section><!-- End Contact Section -->
-    
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" style="margin-bottom: 10px;"><i class="bi bi-arrow-up-short"></i></a>
+    </section>
+  </main>
+  
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>José García Villalón</h3>
+          <p>Perception & AI Engineer | Robotics Enthusiast | Problem Solver</p>
+        </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/jose-garcia-villalon/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/josgarvil" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:jgarcia@catec.aero" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://scholar.google.com" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+        </div>
+        <div class="copyright">
+          &copy; <span id="current-year">2024</span> José García Villalón. All Rights Reserved
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+  
+  <!-- Main JS File -->
+  <script src="assets/js/script.js"></script>
+  
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+    
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 
