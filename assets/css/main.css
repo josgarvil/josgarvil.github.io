@@ -532,7 +532,7 @@ body {
   left: 100%;
 }
 
-.btn-primary {
+/* .btn-primary {
   background: var(--gradient-primary);
   color: var(--black);
   box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
@@ -543,7 +543,7 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 15px 40px rgba(0, 102, 255, 0.4);
   background: var(--primary);
-}
+} */
 
 /* Outline buttons in hero section (dark background) */
 .hero .btn-outline,
@@ -1570,13 +1570,14 @@ body {
 }
 
 .btn-primary {
-  background: var(--primary);
-  color: var(--white);
+  background: var(--gray-300);
+  color: var(--primary-dark);
   box-shadow: var(--shadow);
 }
 
 .btn-primary:hover {
   background: var(--primary-dark);
+  color: var(--gray-300);
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
@@ -1853,7 +1854,7 @@ body {
   width: 100%;
 }
 
-.btn-primary {
+/* .btn-primary {
   background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
   color: black;
   border: none;
@@ -1866,7 +1867,7 @@ body {
   color: white;
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
-}
+} */
 
 .btn i {
   margin-left: 8px;
