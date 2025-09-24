@@ -25,7 +25,11 @@ const modernNav = {
             e.preventDefault();
             const target = document.querySelector(link.getAttribute('href'));
             if (target) {
-              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              // Smooth scroll with header offset to avoid clipping under fixed header
+              const header = document.getElementById('header');
+              const offset = header ? header.offsetHeight + 8 : 80;
+              const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
+              window.scrollTo({ top: y, behavior: 'smooth' });
               navMenu.classList.remove('active');
               navToggle.classList.remove('active');
               document.body.classList.remove('nav-open');
@@ -115,15 +119,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Initialize scroll to home on page load
 function initScrollToHome() {
-  setTimeout(() => {
-    const homeSection = document.getElementById('home');
-    if (homeSection) {
-      homeSection.scrollIntoView({ behavior: 'smooth' });
-    }
-    
-    // Update active nav link
-    updateActiveNavLink('home');
-  }, 100);
+  // Avoid auto-scrolling on load to prevent hero being hidden under fixed header on some devices.
+  // Just ensure the Home link is marked active.
+  updateActiveNavLink('home');
 }
 
 // Update active navigation link
