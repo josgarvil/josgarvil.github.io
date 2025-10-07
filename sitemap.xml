@@ -2,38 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://josgarvil.github.io/</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://josgarvil.github.io/#about</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://josgarvil.github.io/#experience</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://josgarvil.github.io/#education</loc>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://josgarvil.github.io/#projects</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://josgarvil.github.io/#publications</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://josgarvil.github.io/#contact</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://josgarvil.github.io/assets/img/Jose_Garcia_CV.pdf</loc>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

@@ -9,3 +9,38 @@ Crawl-delay: 1
 
 # Allow all search engines to index the site
 # This is a professional portfolio website
+
+# Disallow common sensitive paths (if they exist)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_internal/
+Disallow: /*.log$
+Disallow: /config/
+
+# Allow access to important assets
+Allow: /assets/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.pdf$
+Allow: /*.ico$
+
+# Specific directives for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
