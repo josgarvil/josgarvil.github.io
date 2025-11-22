@@ -11,14 +11,18 @@ const modernNav = {
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
     if (navToggle && navMenu) {
       navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
         navToggle.classList.toggle('active');
         document.body.classList.toggle('nav-open');
+
+        // Update aria-expanded
+        const isExpanded = navMenu.classList.contains('active');
+        navToggle.setAttribute('aria-expanded', isExpanded);
       });
-      
+
       navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
           if (link.getAttribute('href').startsWith('#')) {
@@ -30,12 +34,45 @@ const modernNav = {
               const offset = header ? header.offsetHeight + 8 : 80;
               const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
               window.scrollTo({ top: y, behavior: 'smooth' });
+
+              // Close menu on mobile
               navMenu.classList.remove('active');
               navToggle.classList.remove('active');
               document.body.classList.remove('nav-open');
+              navToggle.setAttribute('aria-expanded', 'false');
             }
           }
         });
+      });
+    }
+  }
+};
+
+// ===== THEME TOGGLE SYSTEM =====
+const themeSystem = {
+  init() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+    // Check for saved user preference, if any, on load of the website
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+    } else if (prefersDarkScheme.matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        let theme = 'light';
+
+        if (document.documentElement.getAttribute('data-theme') !== 'dark') {
+          theme = 'dark';
+        }
+
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
       });
     }
   }
@@ -49,31 +86,61 @@ const contactHandler = {
       form.addEventListener('submit', this.handleSubmit.bind(this));
     }
   },
-  
-  handleSubmit(e) {
+
+  async handleSubmit(e) {
     e.preventDefault();
-    const button = e.target.querySelector('button[type="submit"]');
+    const form = e.target;
+    const button = form.querySelector('button[type="submit"]');
     const originalText = button.innerHTML;
-    
+
+    // Check if form ID is set
+    if (form.action.includes('YOUR_FORM_ID')) {
+      alert('Please update the form action in index.html with your Formspree Form ID.');
+      return;
+    }
+
     button.disabled = true;
     button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-    
-    // Simulate form submission
-    setTimeout(() => {
-      this.showSuccess();
-      e.target.reset();
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        this.showSuccess();
+        form.reset();
+      } else {
+        const data = await response.json();
+        if (Object.hasOwn(data, 'errors')) {
+          alert(data["errors"].map(error => error["message"]).join(", "));
+        } else {
+          alert('Oops! There was a problem submitting your form');
+        }
+      }
+    } catch (error) {
+      alert('Oops! There was a problem submitting your form');
+    } finally {
       button.disabled = false;
       button.innerHTML = originalText;
-    }, 2000);
+    }
   },
-  
+
   showSuccess() {
     const message = document.createElement('div');
     message.className = 'alert alert-success';
     message.innerHTML = '<i class="fas fa-check-circle"></i> Message sent successfully!';
-    message.style.cssText = 'position:fixed;top:20px;right:20px;background:#10b981;color:white;padding:1rem;border-radius:8px;z-index:9999;';
+    message.style.cssText = 'position:fixed;top:20px;right:20px;background:#10b981;color:white;padding:1rem;border-radius:8px;z-index:9999;box-shadow:0 4px 6px rgba(0,0,0,0.1);animation:fadeIn 0.5s ease-out;';
     document.body.appendChild(message);
-    setTimeout(() => message.remove(), 5000);
+    setTimeout(() => {
+      message.style.opacity = '0';
+      message.style.transition = 'opacity 0.5s ease';
+      setTimeout(() => message.remove(), 500);
+    }, 5000);
   }
 };
 
@@ -91,7 +158,7 @@ const loadingScreen = {
 };
 
 // Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Initialize AOS
   if (typeof AOS !== 'undefined') {
     AOS.init({
@@ -100,16 +167,17 @@ document.addEventListener('DOMContentLoaded', function() {
       offset: 100
     });
   }
-  
+
   // Initialize other components
   modernNav.init();
+  themeSystem.init();
   contactHandler.init();
   loadingScreen.init();
-  
+
   // Initialize scroll to home and navigation
   initScrollToHome();
   initHeaderScroll();
-  
+
   // Set current year
   const yearElement = document.getElementById('current-year');
   if (yearElement) {
