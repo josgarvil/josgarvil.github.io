@@ -206,6 +206,9 @@ function updateActiveNavLink(activeId) {
 // Initialize header scroll effects
 function initHeaderScroll() {
   const header = document.getElementById('header');
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
   if (header) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 100) {
@@ -215,4 +218,23 @@ function initHeaderScroll() {
       }
     });
   }
+
+  // Scroll Spy Logic using Intersection Observer
+  const observerOptions = {
+    root: null,
+    rootMargin: '-20% 0px -70% 0px',
+    threshold: 0
+  };
+
+  const observerCallback = (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        updateActiveNavLink(id);
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+  sections.forEach(section => observer.observe(section));
 }
