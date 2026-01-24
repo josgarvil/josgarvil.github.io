@@ -1517,6 +1517,11 @@ body {
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 1rem;
+  text-align: center;
+}
+
+.about-intro p {
+  text-align: center;
 }
 
 .company-highlight {
@@ -4065,6 +4070,14 @@ body {
 
 .social-connect {
   margin-top: 1.25rem;
+  text-align: center;
+}
+
+.social-connect .social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .contact-form-inner {
